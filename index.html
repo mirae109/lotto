@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lotto</title>
+    <link href="./style.css" rel="stylesite">
+</head>
+<body>
+    <h1>자바스크립트 연습</h1>
+
+    <script>
+        var lotto = [];
+        while(lotto.length<6){        // ==은 되도록 자제.(연산속도 저하)
+            var num = parseInt(Math.random()*45+1);
+            if(lotto.indexOf(num) == -1 ){ //로또라는 배열이 num값에 없는 것을 확인 
+                lotto.push(num);
+            }
+        }
+        lotto.sort((a,b)=>a-b);  //오름차순 정렬 but 아스키코드를 정렬함.앞글자끼리 비교함.
+        document.write("<div class='ball ball1'>" + lotto[0] + "</div>");
+        document.write("<div class='ball ball2'>" + lotto[1] + "</div>");
+        document.write("<div class='ball ball3'>" + lotto[2] + "</div>");
+        document.write("<div class='ball ball4'>" + lotto[3] + "</div>");
+        document.write("<div class='ball ball5'>" + lotto[4] + "</div>");
+        document.write("<div class='ball ball6'>" + lotto[5] + "</div>");
+
+
+
+
+        // counst lotto = [1,2,3,4,5,6]; 상수counst로 해도 들어감.
+        // 그러나 lotto = [23,564] 처럼 새로운 배열을 추가하는 것은 안됨. 
+        // document.write(lotto[index]); 0~5까지 들어감 
+        // lotto.push(7); 배열 요소 추가 
+
+
+
+
+    </script>
+</body>
+</html>
+    <!-- 
+    변수 let var(호이스팅) -> ES6 
+    Babel : IE는 ES6 호환X, Babel은 ES6를 ES5 아하의 문법으로 변환시킴.
+    JS : ES6 -> Babel -> Webpack
+    legacy code -> ES5 이하 버전으로 작성됨.(실무에서 써야 할 수도) 
+    -->
+
+    <!--
+    Math.random(); 
+    0부터 0.9999 의 소수점을 변환한다
+    우리가 원하는 것 1~45
+    Math.random()*45; //0~45.~~
+    Math.random()*45+1; //1~45.~~ 
+    -->
+
+    <!-- 
+        for = 정확하게 n번 반복
+        while = 특정 조건을 만족할 때까지 (count변수)
+
+     -->
