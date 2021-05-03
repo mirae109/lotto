@@ -1,0 +1,20 @@
+
+.ball{
+    float: left;
+    width: 60px;
+    height: 60px;
+    line-height: 60px; /*수직 가운데*/
+    font-size: 28px;
+    border-radius: 50%;
+    text-align: center;
+    color: aliceblue;
+    font-weight: 500;
+    margin-right: 6px;
+    text-shadow: 0px 0px 3px rgba(73, 57, 0, 0.8);
+}
+.ball1{ background: rosybrown;}
+.ball2{ background:seagreen}
+.ball3{ background:skyblue}
+.ball4{ background:tomato}
+.ball5{ background:yellow}
+.ball6{ background:violet}
